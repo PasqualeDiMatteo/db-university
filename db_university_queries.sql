@@ -17,7 +17,7 @@ WHERE `cfu` >10;
 
 SELECT * 
 FROM `students`
-WHERE (2023 - YEAR(`date_of_birth`)>30);
+WHERE (YEAR( CURRENT_TIMESTAMP) - YEAR(`date_of_birth`)>30);
 
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
@@ -65,5 +65,7 @@ FROM `teachers`
 GROUP BY `Ufficio`;
 
 -- 3. Calcolare la media dei voti di ogni appello d'esame
+
+
 
 -- 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
